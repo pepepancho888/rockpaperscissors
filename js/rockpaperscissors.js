@@ -1,3 +1,4 @@
+
 //This function returns an integer number between 1 and 3
 function getRandomNumber(){
     let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -37,6 +38,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = "paPER";
-let computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+// This function plays the game
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerChoice = prompt("Choose Rock Paper Scissors");
+        let computerChoice = getComputerChoice();
+        let roundResult = playRound(playerChoice, computerChoice);
+        console.log(roundResult);
+    }
+}
+
+game();
